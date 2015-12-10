@@ -15,7 +15,7 @@ npm init -f (not interactive)
 create a package.json file with {} inside
 
 
-
+_________________
 browserify
 
 Browsers don't have the require method defined, but Node.js does. With Browserify you can write code that uses require in the same way that you would use it in Node.
