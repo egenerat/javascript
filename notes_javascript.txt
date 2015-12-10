@@ -1,0 +1,28 @@
+Grunt is a task-based command line build tool for JavaScript projects. Here's the idea: when working on a JavaScript project, there are a bunch of things you'll want to do regularly. Like what, you ask? Well, like concatenating given files, running JSHint on your code, running tests, or minifying your scripts.
+
+http://code.tutsplus.com/tutorials/meet-grunt-the-build-tool-for-javascript--net-24856
+
+________________
+npm is a command line interface program to manage node.js libraries (it stands for node package manager ). Check out the doc, it is awesome and amazing. As you mentioned, just type npm install in a command prompt, and voilà, you have the library in your local node modules.
+
+http://stackoverflow.com/questions/9237715/what-does-npm-mean-for-socket-io-installing-stuff
+
+npm install <package> --save
+be careful, if package.json does not exist, it will add the dependency in the closest package.json
+Workaround:
+npm init
+npm init -f (not interactive)
+create a package.json file with {} inside
+
+
+
+browserify
+
+Browsers don't have the require method defined, but Node.js does. With Browserify you can write code that uses require in the same way that you would use it in Node.
+Then bundle up everything
+browserify main.js -o bundle.js
+
+run with nodemon instead of node: watches the code updates and automatically reloads
+
+CommonJS defines a module format
+Implementations: CommonJS module systems like browserify or webpack. 
