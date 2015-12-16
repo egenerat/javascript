@@ -26,3 +26,18 @@ run with nodemon instead of node: watches the code updates and automatically rel
 
 CommonJS defines a module format
 Implementations: CommonJS module systems like browserify or webpack. 
+
+
+
+_____________________
+Node js debug
+
+npm install -g node-inspector
+node-debug app.js
+
+Generate SSL certificate https
+openssl genrsa -des3 -passout pass:x -out server.pass.key 2048
+openssl rsa -passin pass:x -in server.pass.key -out server.key
+rm server.pass.key
+openssl req -new -key server.key -out server.csr
+openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
