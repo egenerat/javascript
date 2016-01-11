@@ -41,3 +41,100 @@ openssl rsa -passin pass:x -in server.pass.key -out server.key
 rm server.pass.key
 openssl req -new -key server.key -out server.csr
 openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+
+------------
+Node
+npm install -g nodemon
+nodemon server.js
+
+node --debug-brk server.js
+node-inspector.cmd --web-port=8888
+
+npm search qrcode
+
+npm config set proxy http://PROXY_HOST:8080
+npm config set https-proxy http://PROXY_HOST:8080
+
+Bower .bowerrc
+{
+    "directory": "app/bower_components",
+    "proxy": "http://PROXY_HOST:8080",
+    "https-proxy": "http://PROXY_HOST:8080",
+    "strict-ssl": false
+}
+
+git config --global http.proxy http://USER:PASSWORD@PROXYSERVER:PORT
+
+git config --global http.proxy http://PROXY_HOST:8080
+
+Environment variable:
+NODE_ENV=production
+
+------------------------------
+MEAN stack : Mean.io
+http://scotch.io/tutorials/javascript/creating-a-single-page-todo-app-with-node-and-angular
+mean package preferences;
+
+npm install meanio
+npm install
+
+bower install monospaced/angular-qrcode
+
+scaffolding 
+mean user emile@test.fr --addRole Admin
+
+Angular :
+Checkbox as list
+http://jsbin.com/ImAqUC/1/edit
+
+
+
+assetmanager.init({
+             ^
+TypeError: Object #<Object> has no method 'init'
+Solution : npm install assetmanager@0.1.2
+
+
+
+
+---------------
+Express
+
+http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/
+
+npm install -g express
+npm install -g express-generator
+express nodetest1
+
+Add "mongodb": "*",
+    "monk": "*"
+    in dependencies in package.json
+
+
+
+
+______________________________________
+Javascript
+
+JSON.stringify(json)
+returns a string that represent the JSON (formatted for XML Spy)
+
+
+
+
+----------------------
+Javascript
+module.exports is the object that's actually returned as the result of a require call.
+
+var myFunc1 = function() { ... };
+var myFunc2 = function() { ... };
+exports.myFunc1 = myFunc1;
+exports.myFunc2 = myFunc2;
+
+to export (or "expose") the internally scoped functions myFunc1 and myFunc2.
+
+And in the calling code you would use:
+
+var m = require('mymodule');
+m.myFunc1();
+
