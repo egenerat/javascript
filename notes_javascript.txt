@@ -2,6 +2,9 @@ Grunt is a task-based command line build tool for JavaScript projects. Here's th
 
 http://code.tutsplus.com/tutorials/meet-grunt-the-build-tool-for-javascript--net-24856
 
+
+Less/sass: dynamic CSS
+
 ________________
 npm is a command line interface program to manage node.js libraries (it stands for node package manager ). Check out the doc, it is awesome and amazing. As you mentioned, just type npm install in a command prompt, and voilà, you have the library in your local node modules.
 
@@ -138,3 +141,9 @@ And in the calling code you would use:
 var m = require('mymodule');
 m.myFunc1();
 
+
+Inheritance:
+	- Classical
+	- Prototypal:
+		- Prototypal Pattern
+		- Constructor Pattern
