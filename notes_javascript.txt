@@ -15,6 +15,11 @@ npm init -f (not interactive)
 create a package.json file with {} inside
 
 
+________________
+AMD/require
+
+Asynchronous Module Definition
+
 _________________
 browserify
 
@@ -41,3 +46,117 @@ openssl rsa -passin pass:x -in server.pass.key -out server.key
 rm server.pass.key
 openssl req -new -key server.key -out server.csr
 openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
+
+
+
+______________________________
+React stack
+
+Install yeoman
+npm install -g yo bower grunt-cli gulp
+
+Install React generator
+npm install -g generator-react-fullstac
+
+Create a project
+yo react-fullstack
+
+
+
+______________________________
+Modernizr tells you what HTML, CSS and JavaScript features the user’s browser has to offer.
+
+
+
+_________________
+grunt/gulp
+gulp faster (pipe instead of writing to disk)
+gulp seems to require less configuration
+
+dependencies management
+npm/bower
+npm created for node. Possible to use for front-end
+bower dedicated to front-end
+npm manages tree-dependencies
+bower flat dependencies (better to minimize size)
+
+
+
+
+______________________________
+ECMAScript 6
+
+Some features are already implemented by browsers/node. Some are not.
+Babel transpiles/translate ES6 into ES5 javascript 
+sudo npm install -g babel-cli
+
+babel ES6.js | node
+babel ES6.js --out-file output.js
+
+
+Difference between let and var:
+let works very much like var. The main difference is that the scope of a var variable is the entire enclosing function
+
+
+___________________________
+Javascript :
+.then() : promise
+
+eval() in template to transform a json string as an object
+
+_________________________________________
+
+variables are defined in the closest scope
+the scopes are defined by function, not by if/else/for (different from java/etc)
+
+outer scope variables are visible, but not the opposite
+
+variable hoistings:
+the variables can be used before being declared
+
+function hoisting:
+
+function declaration syntax:
+function declarationSyntaxName(){};
+
+what actually happesn:
+var declarationSyntaxName = function declarationSyntaxName() {};
+
+possible to call a function before being defined
+
+var myFunction = function() {};
+var timer = myFunction();
+/!\ be careful to the parenthesis
+
+var nTimes = function (n) {
+	return function (fn) {
+		for (var i = 0; i < n; i++) {
+			fn(i);
+		}
+	}
+}
+
+var fiveTimes = nTimes(5);
+
+fiveTimes(function (n) {
+	console.log(n);
+})
+
+
+var startTimer = function () {
+	var start = new Date().getTime();
+	return function () {
+		return ((new Date().getTime() - start) / 1000) + 's';
+	};
+};
+
+var timer = startTimer();
+
+console.log(timer());
+
+setInterval(function () {
+	console.log(timer());
+}, 2000);
+
+
+JavaScript objects:
