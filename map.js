@@ -1,8 +1,12 @@
 var numbers = [1, 4, 9];
 var roots = numbers.map(Math.sqrt);
 
+var roots2 = numbers.map(function(number) {
+  return Math.sqrt(number);
+});
 console.log(numbers);
 console.log(roots);
+console.log(roots2);
 // roots is now [1, 2, 3], numbers is still [1, 4, 9]
 
 
