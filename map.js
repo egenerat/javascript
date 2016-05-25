@@ -22,5 +22,5 @@ var objects = [{
 ];
 
 var roots = objects.map(function(obj) {
-  console.log("<id: "+obj.id+"> " + obj.value)
+  console.log("<id: "+obj.id+"> " + obj.value);
 });
