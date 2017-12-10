@@ -1,3 +1,4 @@
 node_modules/
 nodejs/file_reader/file.txt
-.sqlite
+*.sqlite
+.babelrc
