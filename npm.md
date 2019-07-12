@@ -14,3 +14,4 @@ List outdated dependencies
 ```
 npm outdated
 ```
+Otherwise possible to use https://www.npmjs.com/package/npm-check-updates
