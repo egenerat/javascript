@@ -8,3 +8,8 @@ Find global `node_modules` folder, and list of packages installed
 ```
 npm list -g
 ```
+
+List outdated dependencies
+```
+npm outdated
+```
