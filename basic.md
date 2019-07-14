@@ -2,7 +2,9 @@
 
 Get variable type
 
-```typeof <variable>```
+```javascript
+typeof variable
+```
 
 Convert `string` to `number`
 
