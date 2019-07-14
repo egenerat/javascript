@@ -1,4 +1,8 @@
-var raiseException = function () {
+const raiseException = () => {
+    throw Error('It went wrong!');
+};
+
+const raiseComplexException = () => {
     throw {
         name: 'MyException',
         message: 'It happened!!!'
@@ -7,10 +11,11 @@ var raiseException = function () {
 
 try {
     raiseException();
+//     raiseComplexException();
 }
 catch(err) {
-    console.log('Catched exception: ');
-    console.log(JSON.stringify(err));
+    console.log('Catched exception:');
+    console.log(err);
 }
 finally {
     console.log('Goes through finally');
