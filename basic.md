@@ -6,7 +6,7 @@ Get variable type
 
 Convert `string` to `number`
 
-```
+```javascript
 parseInt("123")
 // 123
 parseInt("123.4")
